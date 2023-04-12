@@ -10,7 +10,7 @@ Simple, this repository contains useful scripts to manipulate and visualize geno
 
 
 ## Convert a variant (SNP) table from genotypes to binary table
-[`python snp_genotypes_to_binary_table.py`](python snp_genotypes_to_binary_table.py)
+[`snp_genotypes_to_binary_table.py`](snp_genotypes_to_binary_table.py)
 
 ```
 Usage: snp_genotypes_to_binary_table.py [-h] -i INPUT -o OUTPUT
