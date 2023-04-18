@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+#
+# 
+# **** Description***
+# Converts a variant table from genotypes (nucleotide) to binary using the reference genotype
+#
+# Author(s) 
+#	Guillem Mas Fiol (guillem.mas-fiol@pasteur.fr) 
+#
+
+
 import pandas as pd
 import argparse
 
