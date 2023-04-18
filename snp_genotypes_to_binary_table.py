@@ -10,8 +10,8 @@ args = parser.parse_args()
 input_file = args.input
 mutation_table = pd.read_csv(input_file)
 
-# Copy of the mutation table with only the 'Gene' and sample genotype columns
-genotype_table = mutation_table[['Gene', 'Reference'] + list(mutation_table.columns[2:])].copy()
+# Copy of the mutation table with only the 'Pos' and sample genotype columns
+genotype_table = mutation_table[['Pos', 'Reference'] + list(mutation_table.columns[2:])].copy()
 
 # Function to transform a genotype column into a binary column
 def binarize_genotype(row):
