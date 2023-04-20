@@ -14,7 +14,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Calculate average depths in windows of a reference chromosome given by a BED file. Both the input table and BED file cannot contain column names.')
 parser.add_argument('-i', '--depths', required=True,  help='Filename of the table of depths like given by bedtools, in comma-separated format. First column correspond to the reference chromosome position, second column corresponds to the sequencing depth')
 parser.add_argument('-b', '--bed', required=True,  help='Filename of the BED file. The BED file is a tab-delimited file with three columns: a first column details the name of the reference chromosome, second and third columns are the start and end of each window')
-parser.add_argument('-o', '--output', required=True,  help='Filename of the output csv file')
+parser.add_argument('-o', '--output', required=True,  help='Filename of the output tab-delimited file')
 args = parser.parse_args()
 
 
@@ -43,5 +43,5 @@ window_depths = bed.apply(calculate_window_depth, axis=1, depths=depths).reset_i
 
 
 # Save output to file
-window_depths.to_csv(args.output, index=False)
+window_depths.to_csv(args.output, sep='\t', index=False)
 
