@@ -33,7 +33,7 @@ Optional arguments:
 [`calculate_averages_depths_bed_windows.py`](calculate_averages_depths_bed_windows.py)
 
 ```
-calculate_averages_depths_bed_windows.py [-h] -i DEPTHS -b BED -o OUTPUT
+Usage: calculate_averages_depths_bed_windows.py [-h] -i DEPTHS -b BED -o OUTPUT
 
 Calculates the average sequencing depths in windows from a comma-separated table like the output of bedtools genomecov or multicov, given an imput BED file with the start and end positions of each window.
 
