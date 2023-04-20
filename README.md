@@ -48,6 +48,6 @@ Calculates the average sequencing depths in windows from a comma-separated table
                         reference chromosome, second and third columns are the start and
                         end of each window
   -o OUTPUT, --output OUTPUT
-                        Filename of the output csv file
+                        Filename of the output tab-delimited file
 
 ```
