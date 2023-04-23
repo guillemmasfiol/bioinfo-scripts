@@ -13,7 +13,7 @@ import argparse
 
 
 if len(sys.argv) != 5:
-    print("Usage: python extract_annotations_range_genbank.py <input_file> <start_position> <end_position> <output_file>")
+    print("Usage: python extract_annotations_range_genbank.py <genbank_file> <start_position> <end_position> <output_file>")
     sys.exit(1)
 
 
