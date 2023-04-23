@@ -6,6 +6,8 @@ Simple, this repository contains useful scripts to manipulate and visualize geno
 
 # Table of Contents
 - [Convert a variant (SNP) table from genotypes to binary table](#convert-variant-table-from-genotypes-to-binary-table)
+- [Calculate sequencing depth by windows given by a BED file](#calculate-sequencing-depth-by-windows-given-by-a-BED-file)
+- [Extracts annotations from genbank file within a given range](#extracts-annotations-from-genbank-file-within-a-given-range)
 
 
 
@@ -13,7 +15,7 @@ Simple, this repository contains useful scripts to manipulate and visualize geno
 [`snp_genotypes_to_binary_table.py`](snp_genotypes_to_binary_table.py)
 
 ```
-Usage: snp_genotypes_to_binary_table.py [-h] -i INPUT -o OUTPUT
+Usage: python snp_genotypes_to_binary_table.py [-h] -i INPUT -o OUTPUT
 
 Converts a comma-separated SNP table as the output of RedDog pipeline, from genotypes (nucleotide) data into a binary table, taking into account a "Reference" column
 necessarily present in the input table. Genotypes equal to the "Reference" column or gaps ("-") will be attributed a "0" value, whereas genotypes that differ from the
@@ -33,7 +35,7 @@ Optional arguments:
 [`calculate_averages_depths_bed_windows.py`](calculate_averages_depths_bed_windows.py)
 
 ```
-Usage: calculate_averages_depths_bed_windows.py [-h] -i DEPTHS -b BED -o OUTPUT
+Usage: python calculate_averages_depths_bed_windows.py [-h] -i DEPTHS -b BED -o OUTPUT
 
 Calculates the average sequencing depths in windows from a comma-separated table like the output of bedtools genomecov or multicov, given an imput BED file with the start and end positions of each window.
 
@@ -49,5 +51,15 @@ Calculates the average sequencing depths in windows from a comma-separated table
                         end of each window
   -o OUTPUT, --output OUTPUT
                         Filename of the output tab-delimited file
+
+```
+
+## Extracts annotations from genbank file within a given range
+[`extract_annotations_range_genbank.py`](extract_annotations_range_genbank.py)
+
+```
+Usage: python extract_annotations_range_genbank.py <input_file> <start_position> <end_position> <output_file>
+
+Extracts the annotations for different fields, for elements within a range defined as input arguments (start and end positions) and export results into a table with each column corresponding to a different annotation field.
 
 ```
