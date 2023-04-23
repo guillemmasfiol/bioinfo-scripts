@@ -58,7 +58,7 @@ Calculates the average sequencing depths in windows from a comma-separated table
 [`extract_annotations_range_genbank.py`](extract_annotations_range_genbank.py)
 
 ```
-Usage: python extract_annotations_range_genbank.py <input_file> <start_position> <end_position> <output_file>
+Usage: python extract_annotations_range_genbank.py <genbank_file> <start_position> <end_position> <output_file>
 
 Extracts the annotations for different fields, for elements within a range defined as input arguments (start and end positions) and export results into a table with each column corresponding to a different annotation field.
 
