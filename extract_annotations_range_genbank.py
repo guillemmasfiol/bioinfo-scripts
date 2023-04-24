@@ -17,9 +17,6 @@ if len(sys.argv) != 5:
     sys.exit(1)
 
 
-parser = argparse.ArgumentParser(description='Calculate average depths in windows of a reference chromosome given by a BED file. Both the input table and BED file cannot contain column names.')
-args = parser.parse_args()
-
 input_file = sys.argv[1]
 start_position = int(sys.argv[2])
 end_position = int(sys.argv[3])
