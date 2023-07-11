@@ -22,7 +22,7 @@ function usage {
   echo "Author(s): Guillem Mas Fiol https://github.com/guillemmasfiol  guillem.mas-fiol@pasteur.fr"
   echo ""
   echo ""
-  echo "Usage: $0 [-d <bam_dir>] [-o <output_file>] [-c <chr_replicon>] [-p1 <plasmid1_replicon>] [-p2 <plasmid2_replicon>] [-p3 <plasmid3_replicon>] [-h]"
+  echo "Usage: $0 [-i <bam_dir>] [-o <output_file>] [-c <chr_replicon>] [-p1 <plasmid1_replicon>] [-p2 <plasmid2_replicon>] [-p3 <plasmid3_replicon>] [-h]"
   echo ""
   echo "Example: $0 -i bams_all -o depths.txt -c NC_003143.1 -p1 NC_003132.1 -p2 NC_003131.1 -p3 NC_003134.1"
   echo ""
