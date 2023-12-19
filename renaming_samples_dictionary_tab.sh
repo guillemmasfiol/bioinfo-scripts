@@ -2,7 +2,14 @@
 #
 
 if [ "$#" -ne 3 ]; then
-    echo "Usage: $0 <dictionary_file> <tab_delimited_file> <output_file>"
+    echo "
+	This script takes a textfile with a dictionary of occurrences we want to change within a tab-delimited file.
+	This dictionary file is also tab-delimited and has two columns: one called 'old_sample_id' and another called 'new_sample_id'. The script will iteratively search for occurrences from the column "old_sample_id" and replace them for their corresponding field in "new_sample_id". 
+	
+	
+	Usage: $0 <dictionary_file> <tab_delimited_file> <output_file>
+	
+	"
     exit 1
 fi
 
