@@ -68,6 +68,28 @@ Optional arguments:
 						 
 ```
 
+## Rename samples from a tab-delimited file for new sample IDs using a dictionary file
+[`renaming_samples_dictionary_tab.sh`](renaming_samples_dictionary_tab.sh)
+
+```
+This script takes a textfile with a dictionary of occurrences we want to change within a tab-delimited file.
+This dictionary file is also tab-delimited and has two columns: one called "old_sample_id" and another called "new_sample_id". The script will iteratively search for occurrences from the column "old_sample_id" and replace them for their corresponding field in "new_sample_id". 
+
+Usage: ./renaming_samples_dictionary_tab.sh <dictionary_file> <tab_delimited_file> <output_file>
+```
+
+## Rename samples from a comma-separated file for new sample IDs using a dictionary file
+[`renaming_samples_dictionary_csv.sh`](renaming_samples_dictionary_csv.sh)
+
+Works as [`renaming_samples_dictionary_tab.sh`](renaming_samples_dictionary_tab.sh) but for CSV tables
+
+```
+
+Usage: ./renaming_samples_dictionary_csv.sh <dictionary_file> <csv_file> <output_file>
+
+```
+
+
 ## Calculate sequencing depth by windows given by a BED file
 [`calculate_averages_depths_bed_windows.py`](calculate_averages_depths_bed_windows.py)
 
