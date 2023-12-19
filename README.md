@@ -6,6 +6,7 @@ Simple, this repository contains useful scripts to manipulate and visualize geno
 
 # Table of Contents
 - [Plasmid2Chromosome Depth Ratios Calculator](#Plasmid2Chromosome-Depth-Ratios-Calculator)
+- [Generate consensus fasta files from SNP table](#Generate-consensus-fasta-files-from-SNP-table)
 - [Convert a variant (SNP) table from genotypes to binary table](#convert-variant-table-from-genotypes-to-binary-table)
 - [Calculate sequencing depth by windows given by a BED file](#calculate-sequencing-depth-by-windows-given-by-a-BED-file)
 - [Extracts annotations from genbank file within a given range](#extracts-annotations-from-genbank-file-within-a-given-range)
@@ -27,6 +28,24 @@ Necessary arguments:
 -p2 <plasmid2_replicon>  ID of the second plasmid replicon used for mapping the reads
 -p3 <plasmid3_replicon>  ID of the third plasmid replicon used for mapping the reads
  
+```
+
+## Generate consensus fasta files from SNP table
+[`SNPtable2consensus.py`](SNPtable2consensus.py)
+```
+
+Usage: python SNPtable2consensus.py [-h] --s SNP_TABLE --r REFERENCE_FASTA --o OUTPUT_FOLDER
+
+This script takes a comma-separated SNP table, typically the output from RedDog mapping and variant calling pipeline, and generates a consensus fasta
+sequence for each sample with the same length as the reference sequence, including the variants specific to each sample. Variants include ATGC genotypes
+and '-' for gaps. Reference fasta sequence must be the same used for calling variants in the SNP table.
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --s SNP_TABLE        Input comma-separated SNP table
+  --r REFERENCE_FASTA  FASTA reference sequence
+  --o OUTPUT_FOLDER    Output directory name
+
 ```
 
 ## Convert a variant (SNP) table from genotypes to binary table
