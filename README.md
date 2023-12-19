@@ -8,6 +8,8 @@ Simple, this repository contains useful scripts to manipulate and visualize geno
 - [Plasmid2Chromosome Depth Ratios Calculator](#Plasmid2Chromosome-Depth-Ratios-Calculator)
 - [Generate consensus fasta files from SNP table](#Generate-consensus-fasta-files-from-SNP-table)
 - [Convert a variant (SNP) table from genotypes to binary table](#convert-variant-table-from-genotypes-to-binary-table)
+- [Rename samples from a tab-delimited file for new sample IDs using a dictionary file](#Rename-samples-from-a-tab-delimited-file-for-new-sample-IDs-using-a-dictionary-file)
+- [Rename samples from a comma-separated file for new sample IDs using a dictionary file](#Rename-samples-from-a-comma-separated-file-for-new-sample-IDs-using-a-dictionary-file)
 - [Calculate sequencing depth by windows given by a BED file](#calculate-sequencing-depth-by-windows-given-by-a-BED-file)
 - [Extracts annotations from genbank file within a given range](#extracts-annotations-from-genbank-file-within-a-given-range)
 
