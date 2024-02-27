@@ -28,7 +28,7 @@ function usage {
   echo ""
   echo ""
   echo "Options:"
-  echo "  -d <bam_dir>             Path to directory containing the indexed BAM files"
+  echo "  -i <bam_dir>             Path to directory containing the indexed BAM files"
   echo "  -o <output_file>         Path to output file"
   echo "  -c <chr_replicon>        ID of the chromosome replicon used for mapping the reads"
   echo "  -p1 <plasmid1_replicon>  ID of the first plasmid replicon used for mapping the reads"
