@@ -1,4 +1,4 @@
-# bioinfo-scripts
+# bioinfo-scripts: A repository of bioinformatic useful small tools
 Simple, this repository contains useful scripts to manipulate and visualize genomic data.
 
 
