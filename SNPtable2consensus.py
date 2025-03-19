@@ -31,11 +31,11 @@ def read_snp_table(file_path):
                 snp_data[sample][pos] = genotype
     return snp_data
 
-def build_consensus_sequence(reference_seq, snp_data):
+def build_consensus_sequence(reference_seq, snp_data, output_folder):
     """
-    Build a consensus sequence for each sample based on the SNP data and the reference sequence.
+    Build a consensus sequence for each sample based on the SNP data and the reference sequence,
+    and write each consensus sequence to a file immediately after it is computed.
     """
-    consensus_sequences = {}
     reference_length = len(reference_seq)
 
     for sample, snps in snp_data.items():
@@ -46,16 +46,11 @@ def build_consensus_sequence(reference_seq, snp_data):
             else:
                 consensus_sequence.append(str(reference_seq[pos - 1]))
         
-        consensus_sequences[sample] = "".join(consensus_sequence)
-
-    return consensus_sequences
-
-def write_consensus_fasta(consensus_sequences, output_folder):
-    """
-    Write consensus sequences to separate FASTA files for each sample.
-    """
-    for sample, sequence in consensus_sequences.items():
-        seq = Seq(sequence)
+        # Convert the list of characters to a string
+        consensus_sequence_str = "".join(consensus_sequence)
+        
+        # Create a SeqRecord and write it to a file
+        seq = Seq(consensus_sequence_str)
         record = SeqRecord(seq, id=sample, description="Consensus sequence for " + sample)
         output_file = f"{output_folder}/{sample}_consensus.fasta"
         with open(output_file, "w") as output_handle:
@@ -77,11 +72,8 @@ def main():
     # Read SNP table
     snp_data = read_snp_table(args.snp_table)
 
-    # Build consensus sequences
-    consensus_sequences = build_consensus_sequence(reference_seq.seq, snp_data)
-
-    # Write consensus sequences to separate FASTA files
-    write_consensus_fasta(consensus_sequences, args.output_folder)
+    # Build consensus sequences and write them to files
+    build_consensus_sequence(reference_seq.seq, snp_data, args.output_folder)
 
 if __name__ == "__main__":
     main()
