@@ -8,6 +8,8 @@
 #	Guillem Mas Fiol (guillem.mas-fiol@pasteur.fr) 
 #
 
+#!/usr/bin/env python
+
 import argparse
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
@@ -23,7 +25,7 @@ def read_snp_table(file_path):
         for line in snp_file:
             parts = line.strip().split(",")
             pos = int(parts[0])
-            for i in range(2, len(parts)):
+            for i in range(1, len(parts)):  # Start from index 1 to include the first sample
                 sample = header[i]
                 genotype = parts[i]
                 if sample not in snp_data:
